@@ -1,15 +1,13 @@
 from handlers.icmp_handler import print_icmp_pairs,icmp_summary
 from filters import filter_by_ip,filter_by_protocol,filter_by_mac
 from formatter import format_packet
-from handlers.dhcp_handler import process_transactions,print_dhcp_flows
+from handlers.dhcp_handler import print_dhcp_flows
 from handlers.arp_handler import print_arp_pairs,  arp_summary 
 from handlers.tcp_handler import print_tcp_connections,tcp_summary
 from handlers.ipv4_handler import print_packetsInfo,print_fragments
 from handlers.wifi_handler import print_wifi_analysis, print_wifi_status
 
 def analysis_mode(packets):
-    #faz o pré processamento das transações DHCP
-    process_transactions()
     while True:
         cmd = input("[sniffer] > ")
 
