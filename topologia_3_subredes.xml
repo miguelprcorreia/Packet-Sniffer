@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scenario>
+  <networks/>
+  <devices>
+    <device id="1" name="UMinhoR1" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
+      <position x="350.0" y="300.0" lat="47.576" lon="-122.127" alt="2.0"/>
+      <services><service name="OSPFv2"/><service name="zebra"/><service name="IPForward"/></services>
+    </device>
+    <device id="2" name="UMinhoR2" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
+      <position x="550.0" y="300.0" lat="47.576" lon="-122.126" alt="2.0"/>
+      <services><service name="OSPFv2"/><service name="zebra"/><service name="IPForward"/></services>
+    </device>
+    <device id="3" name="UMinhoR3" icon="" canvas="1" type="router" class="" image="" compose="" compose_name="">
+      <position x="450.0" y="150.0" lat="47.577" lon="-122.127" alt="2.0"/>
+      <services><service name="OSPFv2"/><service name="zebra"/><service name="IPForward"/></services>
+    </device>
+
+    <device id="100" name="ServerDHCP" icon="" canvas="1" type="server" class="" image="" compose="" compose_name="">
+      <position x="200.0" y="150.0" lat="47.577" lon="-122.128" alt="2.0"/>
+      <services><service name="DHCP"/><service name="DefaultRoute"/><service name="IPForward"/></services>
+    </device>
+
+    <device id="10" name="Joana" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="150.0" y="300.0" lat="47.576" lon="-122.129" alt="2.0"/>
+      <services><service name="DefaultRoute"/></services>
+    </device>
+
+    <device id="20" name="Joao" icon="" canvas="1" type="PC" class="" image="" compose="" compose_name="">
+      <position x="750.0" y="300.0" lat="47.576" lon="-122.124" alt="2.0"/>
+      <services><service name="DefaultRoute"/></services>
+    </device>
+  </devices>
+
+  <links>
+    <link node1="1" node2="100">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:01" ip4="10.0.0.1" ip4_mask="24"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:02" ip4="10.0.0.254" ip4_mask="24"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="1" node2="10">
+      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:03" ip4="10.0.0.1" ip4_mask="24"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:04" ip4="" ip4_mask="24"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="2" node2="20">
+      <iface1 id="2" name="eth2" mac="00:00:00:aa:00:05" ip4="10.0.2.1" ip4_mask="24"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:06" ip4="10.0.2.20" ip4_mask="24"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+
+    <link node1="1" node2="2">
+      <iface1 id="2" name="eth2" mac="00:00:00:aa:00:07" ip4="10.0.10.1" ip4_mask="24"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:08" ip4="10.0.10.2" ip4_mask="24"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="2" node2="3">
+      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:09" ip4="10.0.11.1" ip4_mask="24"/>
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:10" ip4="10.0.11.2" ip4_mask="24"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+  </links>
+
+  <session_origin lat="47.579166" lon="-122.132324" alt="2.0" scale="150.0"/>
+  <session_options>
+    <configuration name="enablerj45" value="1"/>
+    <configuration name="controlnet" value=""/>
+  </session_options>
+  <session_metadata>
+    <configuration name="canvas" value='{"gridlines": true, "canvases": [{"id": 1, "dimensions": [1000, 750]}]}'/>
+  </session_metadata>
+</scenario>
