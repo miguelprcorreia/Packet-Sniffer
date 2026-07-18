@@ -43,7 +43,6 @@ The project was developed and validated in two stages: first in a controlled emu
 - **DHCP** — groups messages by transaction ID (XID) to reconstruct the full DORA flow (Discover, Offer, Request, ACK) and measure lease time
 - **IPv4** — detects and groups fragmented datagrams by ID, tracks offsets and reassembly status
 - **IEEE 802.11 (WiFi)** — classifies Management/Control/Data frames, tracks active BSSIDs (via beacons) and most active devices
-- 
 ---
 
 ## 🚀 Getting Started
