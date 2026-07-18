@@ -164,15 +164,6 @@ Packet-Sniffer/
 
 ---
 
-## 🛠️ Tech Stack
-
-- **Language:** Python
-- **Packet capture:** Scapy
-- **Reference tool for validation:** Wireshark
-- **Containerization:** Docker
-
----
-
 <div align="center">
 
 🔗 [github.com/miguelprcorreia/Packet-Sniffer](https://github.com/miguelprcorreia/Packet-Sniffer)
